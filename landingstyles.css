@@ -1,0 +1,139 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 161px;
+}
+
+nav ul li {
+    margin-right: 186px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-bar {
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+}
+
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.slideshow {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.slide {
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #fff; 
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.btn {
+    padding: 10px 20px; 
+    border-radius: 22px;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bold;
+    font-size: -2em;
+    margin: 3px 3px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: white;
+    color: aqua;
+}
+
+.kshpic img {
+    display: flex;
+    height: 58vh;
+}
+
+.kshpic img.round-image {
+    border-radius: 127px;
+    transition: transform 0.3s ease;
+}
+
+
+.kshpic img:hover {
+    transform: scale(1.1); 
+}
+
+.slide img:hover {
+    transform: scale(1.1); 
+}
+
+footer {
+    text-align: center; 
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px 0; 
+}
+
+footer a {
+    text-decoration: none; 
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+footer a:hover {
+    background-color: rgba(255, 255, 255, 0.7); 
+    color: #000; 
+}
