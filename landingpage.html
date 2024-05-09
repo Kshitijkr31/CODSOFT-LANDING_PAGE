@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <style>
+      /* Global styles */
+      body,
+      h1,
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+        margin-right: 10px;
+      }
+
+      body {
+        background-image: url("https://i.imgur.com/bIOHHyr.jpg");
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+      }
+
+      .top-bar {
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+      }
+
+      nav {
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav h1 {
+        margin: 0;
+        margin-left: 21px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 161px;
+      }
+
+      nav ul li {
+        margin-right: 186px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .search-bar {
+        text-align: center;
+      }
+
+      .search-bar input[type="text"] {
+        padding: 5px;
+        border-radius: 18px;
+      }
+
+      header {
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 98.5%;
+        text-align: center;
+      }
+
+      .slideshow {
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 20px auto;
+        text-align: center;
+        display: ruby-text;
+      }
+
+      .slide {
+        display: inline;
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin: 0 5px;
+      }
+
+      .about {
+        display: flex;
+        align-items: center;
+        margin: 20px auto;
+        max-width: 800px;
+        color: #fff;
+      }
+
+      .about-text {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border-radius: 22px;
+        color: white;
+        background-color: dodgerblue;
+        font-weight: bold;
+        font-size: -2em;
+        margin: 3px 3px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: white;
+        color: aqua;
+      }
+
+      .kshpic img {
+        display: flex;
+        height: 58vh;
+
+        width: 23%;
+        margin: 50px auto;
+        margin-left: 21vw;
+      }
+
+      .kshpic img.round-image {
+        border-radius: 127px;
+        transition: transform 0.3s ease;
+      }
+
+      .kshpic img:hover {
+        transform: scale(1.1);
+      }
+
+      .slide img:hover {
+        transform: scale(1.1);
+      }
+
+      footer {
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px 0;
+      }
+
+      footer a {
+        text-decoration: none;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      footer a:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #000;
+      }
+
+      /* Additional styles for responsiveness */
+      @media only screen and (max-width: 768px) {
+        /* Adjust top bar and navigation styles */
+        .top-bar {
+          padding: 0px;
+        }
+
+        nav {
+          flex-direction: column;
+          align-items: center;
+          width: 104%;
+        }
+
+        nav h1 {
+          margin-left: 0;
+          margin-bottom: 10px; /* Add margin bottom to create space between h1 and ul */
+        }
+
+        nav ul {
+          margin-left: 0;
+        }
+
+        nav ul li {
+          margin-right: 0;
+          margin-bottom: 10px;
+          padding-left: 10px;
+          padding-right: 54px;
+        }
+      }
+
+      /* Header styles */
+      header {
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Slideshow styles */
+      .slideshow {
+        overflow: auto;
+        white-space: nowrap;
+        display: ruby-text;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      .slide {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin: 0 30px 0 50px;
+      }
+
+      /* About section styles */
+      .about {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-text {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .kshpic img {
+        height: auto;
+        width: 23%;
+        margin: 50px auto;
+        margin-left: 21vw;
+      }
+
+      /* Common styles */
+      .btn {
+        padding: 10px 20px;
+        border-radius: 22px;
+        color: white;
+        background-color: dodgerblue;
+        font-weight: bold;
+        font-size: -2em;
+        margin: 3px 3px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: white;
+        color: aqua;
+      }
+
+      .kshpic img.round-image {
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+      }
+
+      .kshpic img:hover,
+      .slide img:hover {
+        transform: scale(1.1);
+      }
+
+      footer {
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px 0;
+        padding-right: 10px;
+      }
+
+      footer a {
+        text-decoration: none;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      footer a:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <nav>
+      <h1>Landing Page</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button
+          type="submit"
+          style="
+            background-color: dodgerblue;
+            color: white;
+            border-radius: 55px;
+          "
+        >
+          Search
+        </button>
+      </div>
+    </nav>
+    <header>
+      <h1>Welcome to Landing Page</h1>
+      <p>This is a simple landing page created using HTML and CSS.</p>
+    </header>
+    <section class="slideshow">
+      <div class="slide">
+        <img src="https://i.imgur.com/EhOK7XM.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="https://i.imgur.com/ZPzIHFV.jpg" alt="Slide 2" />
+      </div>
+      <div class="slide">
+        <img src="https://i.imgur.com/bIOHHyr.jpg" alt="Slide 3" />
+      </div>
+    </section>
+    <section class="about">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          This is a short note about us.
+          <span class="more"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            quo ullam voluptas distinctio ad, cupiditate omnis eaque perferendis
+            sit velit officiis cumque. Modi nam provident voluptatibus,
+            consectetur iusto exercitationem ut?.</span
+          >
+        </p>
+        <button class="btn">Read More</button>
+      </div>
+      <div class="kshpic">
+        <img
+          class="round-image"
+          src="https://i.imgur.com/RSW8Jsd.jpg"
+          alt="Kshitij Kumar"
+        />
+      </div>
+    </section>
+    <footer>
+      <p>
+        Contact us:
+        <a href="mailto:kshitijkumar3108@gmail.com"
+          >kshitijkumar3108@gmail.com</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
